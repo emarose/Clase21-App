@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800;900&display=swap");
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  min-height: 100%;
+}
+body{
+  background-color: var(--bg);
+}
+
+* {
+  font-family: 'Jost', sans-serif;
+}
+:root{
+  --azul-claro: #4c64ec;
+  --bg: #f2f4ff;
+  --azul: #373e68;
+  --violeta: #af1cee;
+
+}
+.fw-600{
+  font-weight: 600;
+}
+
+.container {
+  display: grid; 
+  grid-template-columns: 0.4fr 1.6fr; 
+  grid-template-rows: auto; 
+  gap: 20px 20px; 
+  grid-template-areas: 
+  ". . "
+    "logo navi"
+    "logo main"
+    "side main";
+    width: 70%;
+  margin: 0 auto;
+}
+
+.logo { 
+  padding: 18px;
+  grid-area: logo;
+  background-image: url(./logobg.png);
+  background-size: cover;
+  background-position: center;
+  max-height: 100px;
+  border-radius: 10px;
+}
+.logo h3{
+  color: #fff;
+}
+.logo p{
+  font-size: 0.9rem;
+  line-height: 0.1;
+  color: #fff;
+}
+
+.navi {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  grid-area: navi;
+  border-radius: 10px;
+  background-color: var(--azul);
+  padding: 0 20px;
+}
+
+.navi ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.navi ul li {
+ color: #fff;
+}
+
+.purpleButton{
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 7px;
+  background-color: var(--violeta);
+  cursor: pointer;
+}
+
+.navi select{
+  background-color: var(--azul);
+  color: #fff;
+}
+
+/* MAIN */
+
+.main {
+  display: grid;
+  gap: 20px;
+  grid-area: main;
+}
+
+.card{
+  display: flex;
+  width: 78%;
+  align-items: center;
+  height: 110px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  
+}
+
+.cardText h2{
+  font-size: 1.2rem;
+  color: var(--azul);
+}
+
+.cardText p{
+  line-height: 0.5;
+  color: var(--azul);
+}
+
+.cardText a{
+  color: var(--azul-claro);
+  padding: 2px 6px;
+  border-radius: 5px;
+  text-decoration: none;
+  background-color: var(--bg);
+  font-size: 0.9rem;
+}
+
+.comments{
+  font-weight: 600;
+  margin-left: auto;
+}
+
+.comments i{
+  color: var(--bg);
+  padding: 10px;
+}
+
+.box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50px;
+  line-height: 0.1;
+  padding: 5px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: var(--bg);
+  margin-right: 50px;
+}
+.side { 
+  grid-area: side;
+ 
+}
+.tags{
+  min-height: 100px;
+  width: 100%;
+  background-color: #fff;
+  min-height: 150px;
+  border-radius: 10px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+.tags ul{
+  height: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.tags ul li{
+  list-style: none;
+  display: inline;
+  padding: 0 10px;
+  line-height: 2;
+  overflow: hidden;
+}
+.btn{
+  background-color: var(--bg);
+  color: var(--azul-claro);
+  text-decoration: none;
+  padding: 0 6px;
+  border-radius: 5px;
+}
+
+.active{
+  background-color: var(--azul-claro);
+  color: #fff;
+}
+
+
+
+.roadmap{
+  padding: 20px;
+  border: 1px solid blue;
+  background-color: #fff;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.roadmap a{
+  font-size: 0.8rem;
+  color: var(--azul-claro);
+}
+
+.headerRoadmap{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.roadmapLists{
+  display: flex;
+  width: 100%;
+  font-size: 0.9rem;
+}
+.roadmapNames{
+  margin-left: -1em;
+}
+
+.a::marker{
+  color:#f49f85;
+}
+.b::marker{
+  color:rgb(173 31 234);
+}
+.c::marker{
+  color:rgb(98 188 250);
+}
+.roadmapNumbers{
+  list-style: none;
+}
